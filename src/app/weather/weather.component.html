@@ -1,0 +1,27 @@
+<div class="weather-container">
+  <div>
+    <div>
+      <h1>Weather</h1>
+      <img src="../../assets/weather.jpg"
+        style="width: 200px;height: 100px; margin-right: auto; margin-left: auto; display: block;" />
+      <label for="">City</label> <br>
+      <input type="text" name="" id="" [(ngModel)]="cityName" placeholder="Enter City Name" class="form-control">
+      <br> <br>
+      <button (click)="getWeather(cityName)" class="btn btn-success">Search</button> <br><br>
+    </div>
+    <div *ngIf="weather" class="cityDetails">
+      <label for="">City Name: {{weather.name}}</label>
+      <br> <br>
+      <label for="">Country: {{weather.sys.country}}</label>
+      <br> <br>
+      <label for="">Temperature: {{weather.main.temp}}F</label>
+      <br> <br>
+      <label for="">Humidity: {{weather.main.humidity}}</label><br> <br>
+      <label for="">Wind: {{weather.wind.speed}}</label>
+    </div>
+    <h2 *ngIf="errorMsg">
+      {{errorMsg}}
+    </h2>
+  </div>
+</div>
+<br><br>

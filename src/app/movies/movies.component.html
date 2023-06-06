@@ -1,0 +1,23 @@
+<div class="movies-container">
+    <div>
+        <h1>Movies</h1>
+        <img src="../../assets/m1.webp"
+            style="width: 200px;height: 100px;  margin-right: auto; margin-left: auto; display: block;"> <br><br>
+        <label for="">Movie Name</label> <br>
+        <input type="text" name="" id="" placeholder="Enter Movie Name" [(ngModel)]="movietxt" class="form-control" >
+        <br>
+        <button (click)="getMovies(movietxt)" class="btn btn-success">Search</button> <br> <br>
+        
+        <div *ngIf="movieData">
+            <label for=""> Poster:</label>
+            <img src="{{movieData.Poster}}" style="width: 300px;height: 200px;" alt=""> <br> <br>
+            <label for=""> Movie Name: {{movieData.Title}}</label>
+            <br> <br>
+            <label for=""> Actors: {{movieData.Actors}}</label>
+            <br> <br>
+            <label for=""> Director: {{movieData.Director}}</label>
+                </div>
+            <h2 *ngIf="errorMsg">{{errorMsg}}</h2>
+                
+    </div>
+</div>

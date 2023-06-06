@@ -1,0 +1,40 @@
+.nav {
+    background-color: black;
+    list-style-type: none;
+    display: flex;
+}
+h3 {
+    color: white;
+    margin-right: auto;
+}
+.left {
+    margin: 5px;
+    padding: 1px;
+    height: 40px;
+    width: 40px;
+    margin-right: auto;
+    background-color: green;
+}
+.nav li {
+    font-size: 20px;
+    padding: 5px;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: large;
+    /* border-right: 1px solid rgb(197, 32, 32);*/
+}
+
+.nav li a:hover {
+    background-color:darkblue;
+}
+.right {
+    margin: 5px;
+    padding: 1px;
+    height: 40px;
+    width: 40px;
+    background-color: green;
+}

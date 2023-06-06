@@ -1,0 +1,23 @@
+<div class="container">
+    <h1>News</h1>
+    <select name="" (change)="getCategoryNews($event)" class="form-control">
+        <option value="all">All</option>
+        <option value="business">Business</option>
+        <option value="entertainment">Entertainment</option>
+        <option value="health">Health</option>
+        <option value="sports">Sports</option>
+        <option value="science">Science</option>
+        <option value="technology">Technology</option>
+    </select>
+</div>
+<br> <br>
+<div class="container">
+    <div class="col-md-3 newstab" *ngFor="let arr of newArr">
+        <img src="{{arr.urlToImage}}" class="img-responsive"> <br> <br>
+        <h6 style="font-weight: 900;"> {{arr.title}}</h6>
+        <p>{{arr.description }}</p>
+        <a href="{{arr.url}}" target="_blank">
+            <button class="btn btn-success">Read More...</button>
+        </a>
+    </div>
+</div>
