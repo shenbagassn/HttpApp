@@ -8,9 +8,8 @@
 
 <ul class="nav" *ngIf="uservice.getLoggedInUsername()"> 
     <img src="../../assets/logo2.jpg" class="right" > &nbsp;
-    <h3>Welcome {{uservice.getLoggedInUsername()|uppercase}}</h3>
-    
-    <li> <a routerLink="/auth/news"> News</a> </li>
+    <h3>Welcome {{uservice.getLoggedInUsername()|titleCase}}</h3>
+      <li> <a routerLink="/auth/news"> News</a> </li>
     <li> <a routerLink="/auth/weather"> Weather</a> </li>
     <li> <a routerLink="/auth/movies"> Movies</a> </li>
     <li> <a (click)="doLogout()">Logout</a> </li>

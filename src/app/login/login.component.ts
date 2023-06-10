@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
           if (this.arr[i].username == this.usrname && this.arr[i].password == this.pswd) {
             localStorage.setItem("loggedUser", this.usrname);
             this.flag = true;
-            this.myRouter.navigateByUrl("/auth/weather");
+            this.myRouter.navigateByUrl("/auth/news");
             break;
           }
         }

@@ -19,12 +19,12 @@
 }
 
 .btn-container {
-    .btn {
+
         margin-left: 150px;
         margin-top: 10px;
         font-weight: bold;
         font-size: large;
-    }
+    
 }
 
 label {
