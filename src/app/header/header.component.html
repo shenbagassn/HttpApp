@@ -1,13 +1,13 @@
 <!--Horizontal Menu Bar-->
 <ul class="nav" *ngIf="!uservice.getLoggedInUsername()">
     
-        <img src="../../assets/logo2.jpg" class="left">
+        <img src="assets/logo2.jpg" class="left">
     
     <li > <a routerLink="/login">Login</a></li>
 </ul>
 
 <ul class="nav" *ngIf="uservice.getLoggedInUsername()"> 
-    <img src="../../assets/logo2.jpg" class="right" > &nbsp;
+    <img src="assets/logo2.jpg" class="right" > &nbsp;
     <h3>Welcome {{uservice.getLoggedInUsername()|titleCase}}</h3>
       <li> <a routerLink="/auth/news"> News</a> </li>
     <li> <a routerLink="/auth/weather"> Weather</a> </li>

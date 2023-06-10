@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuService } from '../menu.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-news',
@@ -8,8 +9,11 @@ import { MenuService } from '../menu.service';
 })
 export class NewsComponent implements OnInit {
   newArr: any[] = [];
+  environment =environment;
   constructor(public mservice: MenuService) { }
   ngOnInit(): void {
+    console.log(this.environment);
+    
     this.mservice.getFullNews().subscribe({
       next: (data: any) => {
         //console.log(data);
